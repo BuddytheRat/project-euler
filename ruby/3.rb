@@ -2,7 +2,7 @@
 #
 #What is the largest prime factor of the number 600851475143?
 #Note: While this CAN calculate the given number, the calculation would probably take days.
-number = 600851475143
+number = 13195
 current = number / 2
 while (current > 1)
 	#puts "Checking #{current}"
@@ -10,7 +10,7 @@ while (current > 1)
 		puts "Found factor: #{current}"
 		prime = true
 		for i in 2..current-1
-			if (i > 2 and i % 2 == 0)
+			if (i > 2 and i.even?)
 				next
 			end
 			if (current % i == 0)
